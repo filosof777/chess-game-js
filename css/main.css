@@ -371,7 +371,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: "sans", sans-serif;
-  background-color: #fff;
 }
 
 h1,
@@ -409,6 +408,68 @@ img {
 
 .col-pdg {
   padding: 0;
+}
+
+.chess__board {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.chess__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 410px;
+  height: 410px;
+  border: 5px solid #000000;
+}
+
+.chess__item {
+  width: 50px;
+  height: 50px;
+}
+
+.chess__white {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+}
+
+.stone__list {
+  padding: 20px 0;
+}
+
+.stone__item {
+  width: 45px;
+  height: 45px;
+}
+
+.stone__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.stone__btn {
+  border: 1px solid #124543;
+  background-color: #F0D9B5;
+  border-radius: 5px;
 }
 
 /* VISUALLY-HIDDEN */

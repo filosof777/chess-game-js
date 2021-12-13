@@ -1,0 +1,54 @@
+.chess {
+
+  &__board {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    width: 410px;
+    height: 410px;
+    border: 5px solid #000000
+  }
+
+  &__item {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+  }
+}
+
+.stone {
+
+  &__list {
+    padding: 20px 0;
+  }
+
+  &__item {
+    width: 45px;
+    height: 45px;
+    
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  
+  &__btn {
+    border: 1px solid #124543;
+    background-color: #F0D9B5;
+    border-radius: 5px;
+  }
+}
