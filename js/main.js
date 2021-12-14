@@ -400,45 +400,76 @@ for (item of chessBoards) {
   // console.log(item);
 }
 
+let sum = 0
+
 elBoardList.addEventListener('click', (e) => {
+  for (let [key, value] of Object.entries(elBoardList)) {
+    console.log(`${key}: ${value}`);
+    console.log(4654654);
+  }
   for (item of chessBoards) {
-    for (let j = 1; j <= 8; j++) {
-      if (e.target.id == item.id) {
-        let sum = Math.floor(item.id /= 10);
-        // elItem.style.backgroundColor = 'red'
-        // console.log(item.color);
-        item.id += sum
-        e.target.style.backgroundColor = 'red'
+    if (e.target.id == item.id) {
+      let sum = Math.floor(item.id / 10)
+      for (let i = 1; i <= 8; i++) {
+        sum += String(i)
+        sum = Number(sum)
+        item.id = sum
+        // console.log(item.id);
+        if (sum == item.id) {
+          item.color = 'blue'
+          // console.log();
+          // console.log(item.color = 'red');
+          // item.color = 'red';
+          // console.log('red');
+        }
+        // console.log(sum);
         
-      // console.log(++item.id);
-        // console.log(item = 1);
-        // item.x = j;
-        // item.y = j;
-        // console.log(`bu x = ${j} bu item ${item.x}`);
-        // console.log(`bu y = ${j} bu item ${item.y}`);
-        // item.i
-        // console.log(item.x);
+        sum = Math.floor(item.id / 10)
       }
-      // console.log(item.id);
-      // console.log(item.x);
-      // console.log(item.y);
-      // console.log(item.color);
-      // console.log(item.color);
-      // console.log(item);
-      // console.log(564654);
-    // console.log(item.id);
-    // console.log(e.target.id);
+
     }
   }
 });
 
-let elStoneList = document.querySelector('.stone__list');
-let elStoneItem = document.querySelector('.stone__item');
+// elBoardList.addEventListener('click', (e) => {
+//   for (item of chessBoards) {
+//     for (let j = 1; j <= 8; j++) {
+//       if (e.target.id == item.id) {
+//         let sum = Math.floor(item.id /= 10);
+//         // elItem.style.backgroundColor = 'red'
+//         // console.log(item.color);
+//         item.id += sum
+//         e.target.style.backgroundColor = 'red'
+        
+//       // console.log(++item.id);
+//         // console.log(item = 1);
+//         // item.x = j;
+//         // item.y = j;
+//         // console.log(`bu x = ${j} bu item ${item.x}`);
+//         // console.log(`bu y = ${j} bu item ${item.y}`);
+//         // item.i
+//         // console.log(item.x);
+//       }
+//       // console.log(item.id);
+//       // console.log(item.x);
+//       // console.log(item.y);
+//       // console.log(item.color);
+//       // console.log(item.color);
+//       // console.log(item);
+//       // console.log(564654);
+//     // console.log(item.id);
+//     // console.log(e.target.id);
+//     }
+//   }
+// });
 
-elStoneList.addEventListener('click', (e) => {
-  // e.target.classList.con
-  console.log(5645);
-})
+// let elStoneList = document.querySelector('.stone__list');
+// let elStoneItem = document.querySelector('.stone__item');
+
+// elStoneList.addEventListener('click', (e) => {
+//   // e.target.classList.con
+//   console.log(5645);
+// })
 
 // elItem.addEventListener('click', (e) => {
 //   console.log(564654);
